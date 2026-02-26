@@ -4,25 +4,129 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Aniversário Rock</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="./styles/main.scss">
 
-    <!-- styles css -->
-    <link rel="stylesheet" href="styles/main.scss" >
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 </head>
 <body>
+
     <header class="hero">
         <div class="container">
-            <div class="hero__title">
-                <H1>Aniversário Rock</H1>
-                <div class="hero__logo">
-                    <img class="hero__logo-wrapper" src="./images/logo.png" alt="Logo"
-                </div>
+            <div class="hero__logo-container">
+                <img class="hero__logo" src="./images/logo.png" alt="Logo">
+            </div>
+
+            <p class="hero__text">
+                A maior festa Rock do Brasil começa em <span id="contador"></span>
+            </p>
+
+            <div class="infos-bar">
+                <ul class="infos-bar__infos">
+                    <li class="infos-bar__infos__item">
+                        <b>Localização</b>
+                        Club Social - Barra Funda - São Paulo
+                    </li>
+                    <li class="infos-bar__infos__item">
+                        <b>Presente</b>
+                        Aceitando a doação de valores a partir de R$ 50,00
+                    </li>
+                    <li class="infos-bar__infos__item">
+                        <b>Quando</b>
+                        19/08/2026 às 19 hrs
+                    </li>
+                </ul>
+                <a href="#" class="button button--primary">
+                    Confirme sua presença
+                </a>
             </div>
         </div>
-
     </header>
-    
 
+    <section class="event event--frontend">
+        <div class="container" data-aos="fade-right">
+            <div class="event__details">
+                <h2 class="event__details__title">Menu</h2>
+                <p class="event__details__description">
+                    Saboreie o melhor do cardápio rock'n roll, com opções que vão desde petiscos clássicos até pratos exclusivos para manter a energia lá no alto.
+                </p>
+            </div>
+            <img class="event__image" src="./images/front -end menu.png" alt="Menu Frontend">
+        </div>
+    </section>
 
-    <scripts src="./scripts/main.js"></scripts>
+    <section class="event event--ux-ui event--image-left">
+        <div class="container" data-aos="fade-left">
+            <div class="event__details">
+                <h2 class="event__details__title">Bebidas</h2>
+                <p class="event__details__description">
+                    Drinks temáticos, cervejas artesanais e as melhores combinações para brindar essa noite histórica.
+                </p>
+            </div>
+            <<img class="event__image" src="./images/bebidas rock.png" alt="Bebidas Rock">
+        </div>
+    </section>
+
+    <section class="event event--data-science">
+        <div class="container" data-aos="fade-right">
+            <div class="event__details">
+                <h2 class="event__details__title">Playlist</h2>
+                <p class="event__details__description">
+                    Uma curadoria impecável dos clássicos aos hits atuais, garantindo que o palco nunca fique vazio.
+                </p>
+            </div>
+            <img class="event__image" src="./images/musicas rock.png" alt="Playlist Rock">
+        </div>
+    </section>
+
+    <section class="event event--backend event--image-left">
+        <div class="container" data-aos="fade-left">
+            <div class="event__details">
+                <h2 class="event__details__title">Figurino</h2>
+                <p class="event__details__description">
+                    Jaquetas de couro, tachas e o bom e velho preto básico. Prepare o seu melhor visual rocker.
+                </p>
+            </div>
+            <img class="event__image" src="./images/bac-end figurino para a festa.png" alt="Figurino">
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer__container">
+            <div class="footer__contact">
+                <h3>Contato</h3>
+                <p>Rua do Rock, 1983</p>
+                <p>São Paulo - SP</p>
+                <p>Email: contato@rocknroll.com</p>
+                <p>Tel: (11) 99999-9999</p>
+            </div>
+
+            <div class="footer__social">
+                <div class="footer__icons">
+                    <a href="https://github.com/KarolinePodlasinski83" target="_blank"><i class='bx bxl-github'></i></a>
+                    <a href="https://www.linkedin.com/in/karoline-podlasinski-5b1271132/" target="_blank"><i class='bx bxl-linkedin'></i></a>
+                    <a href="https://www.instagram.com/karoline_podlasinski/" target="_blank"><i class='bx bxl-instagram'></i></a>
+                </div>
+                <button class="footer__hire">
+                    Disponível para contratação
+                </button>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 1000,
+            once: true
+        });
+    </script>
+    <script src="./scripts/main.js"></script>
 </body>
 </html>

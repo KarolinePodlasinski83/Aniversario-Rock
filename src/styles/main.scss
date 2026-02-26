@@ -1,3 +1,35 @@
+@use './variables';           // Estão na mesma pasta 'styles'
+@use './hero';                // Estão na mesma pasta 'styles'
+@use './components/infos_bar'; // Caminho correto para entrar na pasta
+@use './components/buttons';   // Caminho correto para entrar na pasta
+@use './events';              // Note que o arquivo no Explorer se chama '_events.scss' (plural)          // Correto (garanta que o arquivo se chame _events.scss)
+@use './components/footer';
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+    color: variables.$textColor;
+    list-style: none;
+}
+
 body {
-    background-color: red;
+    // O caminho abaixo está correto se a pasta 'images' estiver fora de 'styles'
+    background-image: url(../images/fundo.png);
+    opacity: 1;
+}
+
+.container {
+    max-width: 960px;
+    width: 100%;
+    margin: 0 auto;
+
+    @media (max-width: 640px) {
+        max-width: 80%;
+    }
+
+    @media (max-width: 1024px) {
+        max-width: 90%;
+    }
 }

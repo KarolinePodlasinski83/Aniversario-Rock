@@ -1,0 +1,63 @@
+@use '../variables';
+
+.infos-bar {
+    padding: 24px; // Aumentei o respiro interno
+    background-color: variables.$textColor;
+    display: flex;
+    justify-content: space-between;
+    align-items: center; // Centraliza verticalmente texto e botão
+    gap: 32px; // Garante que a lista e o botão não grudem
+    border-radius: 16px; // Bordas mais arredondadas conforme o botão
+
+    &__infos {
+        display: flex;
+        gap: 48px; // Espaço maior entre Localização, Presente e Quando
+        list-style: none;
+        padding: 0;
+        margin: 0;
+
+        &__item {
+            font-size: 14px;
+            color: variables.$secondaryTextColor;
+            line-height: 1.4; // Melhora a leitura do texto pequeno
+
+            b {
+                color: variables.$secondaryTextColor;
+                font-size: 18px;
+                display: block;
+                margin-bottom: 4px; // Espaço entre o título e o texto
+            }
+        }
+    }
+
+    .button {
+        // Garante que o botão não encolha
+        flex-shrink: 0; 
+        padding: 16px 32px;
+        border-radius: 50px;
+        // ... restante do seu código de hover ...
+    }
+
+    // Responsivo para telas médias (tablets)
+    @media (max-width: 1024px) {
+        &__infos {
+            gap: 24px;
+        }
+    }
+
+    // Responsivo para Mobile
+    @media (max-width: 768px) {
+        flex-direction: column; // Empilha os itens
+        text-align: center;
+        
+        &__infos {
+            flex-direction: column;
+            gap: 24px;
+            margin-bottom: 32px;
+        }
+
+        .button {
+            width: 100%;
+        }
+    }
+}
